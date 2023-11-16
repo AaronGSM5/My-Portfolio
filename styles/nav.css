@@ -1,0 +1,127 @@
+nav {
+  width: 600px;
+  height: 100%;
+
+}
+
+.nav-border{
+  position: absolute;
+  width: 390px;
+  left: -10px;
+  height: 2px;
+
+  object-fit: cover;
+  box-shadow: 0px 0px 1px white;
+}
+
+.top-nav-border {
+  top: -15px;
+  transition: 0.2s;
+}
+
+.bottom-nav-border {
+  top: 45px;
+  transition: 0.2s;
+}
+
+.nav-links-container {
+  margin-left: 100px;
+  transition: 1s;
+  opacity: 0;
+  height: 100%;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  position: relative;
+  font-weight: 200;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.about {
+  text-shadow: 0 0 10px white;
+}
+
+.about, .work {
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 22px;
+}
+
+.nav-links-container:hover .top-nav-border {
+  top: -18px;
+}
+
+.nav-links-container:hover .bottom-nav-border {
+  top: 48px;
+}
+
+.about:hover {
+ color: rgb(9, 255, 0)
+}
+
+.work:hover {
+  color : rgb(0, 162, 255);
+}
+
+.sub-links {
+  height: 85%;
+}
+
+.mail-container {
+  position: relative;
+}
+
+.mail {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+
+  display: block;
+}
+
+.mail:hover .svg-mail {
+  fill: rgb(162, 0, 255);
+}
+
+.mail-container:hover .mail-tooltip {
+  opacity: 1;
+}
+
+.mail-container .mail-tooltip {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 7px;
+  right: -200px;
+
+  width: 200px;
+  height: 20px;
+  background-color: transparent;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-justify: center;
+
+  opacity: 0;
+  transition: 0.5s;
+  text-decoration: underline;
+}
+
+.mail-pointer {
+  pointer-events: none;
+}
+
+.svg-mail {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  z-index: 200;
+}
+
+

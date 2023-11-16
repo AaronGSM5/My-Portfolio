@@ -1,0 +1,177 @@
+.content {
+  width: 100%;
+  height: 80%;
+
+  transition: 1s;
+  opacity: 0;
+  position: relative;
+}
+
+.work-content {
+width: 100%;
+height: 100%;
+
+position: absolute;
+background-color: #161616 ;
+z-index: 100;
+}
+
+.content-title {
+  font-size: 28px;
+  text-align: center;
+  width: 100%;
+}
+
+.item-container {
+  position: relative;
+  width: 1000px;
+  height: 90%;
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  justify-self: center;
+}
+
+.item-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.item-container .slide {
+  scroll-snap-align: start;
+}
+
+.item-container .item {
+
+  width: 1000px;
+  height: 90%;
+  padding: 0 100px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  box-sizing: border-box;
+}
+
+.right-side {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tictactoe-link {
+  height: 300px;
+}
+
+.tictactoe {
+  height: 300px;
+  border: black 3px solid;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.weltuhr {
+  object-fit: cover;
+  width: 390px;
+  height: 180px;
+
+  border: black 3px solid;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.tictactoe:hover, .weltuhr:hover {
+  border-color: white;
+}
+
+.content-bar {
+  background-color: transparent;
+  width: 900px;
+  height: 5%;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+
+.content-sections {
+  background: white;
+  width: 30%;
+  height: 30%;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.slider1 {
+  background: rgb(9, 255, 0);
+}
+
+.arrow {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.item-text{
+  font-size: 18px;
+}
+
+.item-text h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+
+
+/* ABOUT CONTENT */
+
+.about-content {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+z-index: 101;
+background-color: #161616;
+}
+
+  .about-container {
+  width: 80%;
+  height: 70%;
+  }
+
+  .about-container h2 {
+  font-size: 6rem;
+  transition: 0.5s;
+  }
+
+  .about-container span {
+  font-size: 21px;
+  }
+
+
+  .about-container span p button {
+  font-size: 21px;
+  text-decoration: underline;
+  }
+
+  .about-container span p button:hover {
+  color: lightblue;
+  }

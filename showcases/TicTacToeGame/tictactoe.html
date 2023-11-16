@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>TicTacToe</title>
+  <link rel="icon" href="tictactoe-images/wicon.png">
+  
+  <!-- STYLES -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- STYLES -->
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- FONTS -->
+</head>
+
+<body>
+
+<div class="background-container">
+  <img class="background" src="backgrounds/sky.webp">
+  <img class="blur" src="backgrounds/Blur.png">
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="settings">
+        <h1>EINSTELLUNGEN</h1>
+        <button class="js-play-computer">Gegen Computer spielen</button>
+        <button class="js-play-friend">Gegen einen Freund spielen</button>
+    </div>
+    <div class="game-container">
+      <div class="game">
+        <button class="button-u0"></button>
+        <button class="button-u1"></button>
+        <button class="button-u2"></button>
+  
+        <button class="button-m0"></button>
+        <button class="button-m1"></button>
+        <button class="button-m2"></button>
+  
+        <button class="button-b0"></button>
+        <button class="button-b1"></button>
+        <button class="button-b2"></button>
+      </div>
+      <div class="reset-container">
+        <button class="reset">NEUES SPIEL</button>
+      </div>
+    </div>
+    <div class="score">
+      <h1>PUNKTELISTE</h1>
+
+      <button  id="x-wins">X: 0</button>
+      <button  id="o-wins">O: 0</button>
+    </div>
+  </div>
+
+  <button class="change-background">HINTERGRUND ÄNDERN</button>
+</div>
+
+<script src="intro.js"></script>
+<script src="game.js"></script>
+<script src="background.js"></script>
+
+</body>
+</html>
