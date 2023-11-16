@@ -2,6 +2,7 @@
 //VARS
 const inputSeconds = document.querySelector('.input-second')
 const inputMinutes = document.querySelector('.input-minute')
+const title = document.querySelector('title')
 
 let timerSek = 0;
 let timerMin = 0;
@@ -31,8 +32,7 @@ function timer() {
                     clearInterval(interval)
                 }
     
-                document.querySelector('.timer-show').innerHTML =
-                `${timerMin} : ${timerSek}`
+                updateTimer();
                 console.log('ch1')
             }, 1000);
             document.querySelector('.start').innerHTML = 'Stop'
@@ -43,6 +43,12 @@ function timer() {
         clearInterval(interval)
         document.querySelector('.start').innerHTML = 'Start'
     }
+}
+
+function updateTimer() {
+  document.querySelector('.timer-show').innerHTML =
+  `${timerMin} : ${timerSek}`
+  title.textContent = `${timerMin} : ${timerSek}`
 }
 //FUNCTIONS
 //FUNCTIONS
@@ -60,22 +66,34 @@ document.querySelector('.clear').addEventListener('click', () => {
     inputSeconds.value = ''
     inputMinutes.value = ''
 
-    document.querySelector('.timer-show').innerHTML =
-    `${timerMin} : ${timerSek}`
+    updateTimer();
     document.querySelector('.start').innerHTML = 'Start'
 
 })
 
 inputSeconds.addEventListener('input', () => {
-    if (inputSeconds.value <= 60 && isIntervalRunning === false) {
-        timerSek = inputSeconds.value
-        console.log(timerSek)
+    if (inputSeconds.value <= 60 && isIntervalRunning === false && inputSeconds.value >= 0) {
+        timerSek = inputSeconds.value || 0
+        updateTimer();
+    }
+    else {
+      inputSeconds.value = 0
+      timerSek = 0
+      updateTimer();
     }
 })
+
 inputMinutes.addEventListener('input', () => {
     if (isIntervalRunning === false) {
-        timerMin = inputMinutes.value;
-        console.log(timerMin)
+      if (inputMinutes.value >= 0) {
+        timerMin = inputMinutes.value || 0
+        updateTimer();
+      }
+      else {
+        inputMinutes.value = 0
+        timerMin = 0
+        updateTimer();
+      }
     }
 })
 //EVENTS
