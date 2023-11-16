@@ -1,0 +1,78 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+}
+
+.wrapper {
+    width: 600px;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    z-index: 101;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-show {
+    font-size: 80px;
+}
+
+.inputs {
+    text-align: center;
+}
+
+.input-minute, .input-second {
+    width: 50px;
+    padding: 2px 5px;
+    text-align: center;
+    background: none;
+    border: 1px white solid;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.input-minute::placeholder, .input-second::placeholder {
+    color: rgb(206, 206, 206);
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    background: none;
+    border: white 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+}
