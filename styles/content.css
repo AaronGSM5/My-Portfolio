@@ -92,7 +92,15 @@ z-index: 100;
   cursor: pointer;
 }
 
-.tictactoe:hover, .weltuhr:hover {
+.countdown {
+  width: 400px;
+  border: black 3px solid;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.tictactoe:hover, .weltuhr:hover, .countdown:hover {
   border-color: white;
 }
 
