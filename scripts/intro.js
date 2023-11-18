@@ -22,7 +22,6 @@ const tBorder = document.querySelector('.left-top-border')
 window.addEventListener('DOMContentLoaded', () =>{
 
   setTimeout(() => {
-
     rBorder.style.height = '300px'
     rBorder.style.right = '-30px'
     rBorder.style.bottom = '-30px'
