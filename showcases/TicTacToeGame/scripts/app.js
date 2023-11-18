@@ -35,3 +35,12 @@ window.addEventListener('DOMContentLoaded', () =>{
 })
 //INTRO
 //INTRO
+
+const infoButton = document.getElementById('computer-info')
+const popup = document.getElementById('computer-popup')
+let popupVisible = false
+
+infoButton.addEventListener('click', () => {
+  if (!popupVisible) {popup.style.opacity = 1; popupVisible = true}
+  else if (popupVisible) {popup.style.opacity = 0; popupVisible = false}
+})

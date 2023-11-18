@@ -4,6 +4,8 @@
 <head>
   <title>TicTacToe</title>
   <link rel="icon" href="tictactoe-images/wicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- STYLES -->
   <link rel="stylesheet" href="styles.css">
@@ -27,7 +29,19 @@
   <div class="content">
     <div class="settings">
         <h1>EINSTELLUNGEN</h1>
-        <button class="js-play-computer computer">Gegen Computer spielen</button>
+
+        <div class="play-computer-container"> 
+          <button class="js-play-computer computer">
+            Gegen Computer spielen
+          </button>
+          <button id="computer-info">
+            <img src="tictactoe-images/info-icon.svg">
+          </button>
+          <div id="computer-popup" class="popup">
+            Spielt zufällige Züge
+          </div>
+        </div>
+
         <button class="js-play-friend friend is-active">Gegen einen Freund spielen</button>
     </div>
     <div class="game-container">
