@@ -9,8 +9,12 @@
   font-weight: 200;
 }
 
+:root {
+  --background-color: #090909;
+}
+
 body {
-  background-color: #161616;
+  background-color: var(--background-color);
 }
 
 a {
@@ -24,7 +28,6 @@ button {
 }
 
 .header-title, .nav-links-container, .content{
-  /* border: 2px dashed white;   */
   color: white;
 }
 
