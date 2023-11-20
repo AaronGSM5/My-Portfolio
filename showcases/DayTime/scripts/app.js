@@ -51,12 +51,6 @@ function closePopup() {
   .style.opacity = 0
 }
 
-
-
-
-
-
-
 //EVENTS
 document.querySelector('.edit').addEventListener('click', () => {
   document.querySelector('.timezone-popup').style.zIndex = 101
@@ -70,6 +64,10 @@ document.getElementById('checkmark').addEventListener('click', () => {
   changeTimeZone()
 })
 //EVENTS
+
+
+
+
 
 
 
