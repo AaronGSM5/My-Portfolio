@@ -28,12 +28,9 @@ function timer() {
                 }
     
                 else if(timerMin === 0 && timerSek === 0) {
-                    console.log(timerMin)
                     clearInterval(interval)
                 }
-    
                 updateTimer();
-                console.log('ch1')
             }, 1000);
             document.querySelector('.start').innerHTML = 'Stop'
     }
@@ -46,6 +43,15 @@ function timer() {
 }
 
 function updateTimer() {
+  if(timerSek <= 9 && timerSek.toString().length < 2) {
+    timerSek = '0' + timerSek
+  }
+
+  if(timerMin <= 9 && timerMin.toString().length < 2) {
+    timerMin = '0' + timerMin
+  }
+
+
   document.querySelector('.timer-show').innerHTML =
   `${timerMin} : ${timerSek}`
   title.textContent = `${timerMin} : ${timerSek}`
